@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Creatzz</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .background-image {
+        background-image: url('bg3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        opacity: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(240, 240, 240, 0.8);
+        gap: 20px;
+    }
+    .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        perspective: 1000px;
+        margin: 10px;
+    }
+    .card-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+    }
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+    .card-face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .card-front {
+        background: linear-gradient(45deg, #ff00cc, #3333ff);
+        color: #fff;
+    }
+    .card-back {
+        background-color: #fff;
+        color: #333;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-content {
+        text-align: center;
+    }
+    .card-content h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        animation: fadeInDown 1s ease;
+    }
+    .card-content p {
+        margin: 0;
+        font-size: 16px;
+        animation: slideInUp 1s ease;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3333ff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #ff00cc;
+    }
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .login-form {
+        display: none;
+        width: 80%;
+        max-width: 300px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .card-back:hover .login-form {
+        display: block;
+    }
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="submit"] {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .login-form input[type="submit"] {
+        background-color: #3333ff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .login-form input[type="submit"]:hover {
+        background-color: #ff00cc;
+    }
+</style>
+</head>
+<body>
+<div class="background-image">
+<div class="card">
+  <div class="card-inner">
+    <div class="card-face card-front">
+      <div class="card-content">
+        <h2 style="color: #ff00cc; font-family: 'Verdana', sans-serif;">Background Remover AI</h2>
+        
+        <p>Remove backgrounds from your images effortlessly with our AI-powered tool. Perfect for creating stunning visuals in seconds!</p>
+     <br><br> <button class="btn">
+        Open
+      </button>
+    </div>
+    </div>
+    <div class="card-face card-back">
+      <div class="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Login">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-face card-front">
+      <div class="card-content">
+        <h2 style="color: #ff9900; font-family: 'Arial Black', sans-serif;">Text Generator AI</h2>
+        <p>Generate high-quality text for your projects with our advanced AI. From articles to social media posts, it does it all!</p>
+       <br><br> <button class="btn">
+            Open
+          </button></div>
+    </div>
+    <div class="card-face card-back">
+      <div class="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Login">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-face card-front">
+      <div class="card-content">
+        <h2 style="color: #33cc33; font-family: 'Courier New', monospace;">Image Generator AI</h2>
+        <p>Create stunning images from text prompts with our AI. Ideal for artists, marketers, and anyone in need of quick, creative visuals!</p>
+        <br><br> <button class="btn">
+            Open
+          </button></div>
+    </div>
+    <div class="card-face card-back">
+      <div class="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Login">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
